@@ -1,40 +1,37 @@
 package com.hemebiotech.analytics;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.util.List;
+import java.util.Map;
+
+import com.hemebiotech.analytics.impl.SymptomAnalyzerImplHashMap;
+import com.hemebiotech.analytics.impl.SymptomReaderImplFromFile;
+import com.hemebiotech.analytics.impl.SymptomReportWriterImplFile;
+import com.hemebiotech.analytics.interfaces.ISymptomAnalyzer;
+import com.hemebiotech.analytics.interfaces.ISymptomReader;
+import com.hemebiotech.analytics.interfaces.ISymptomReportWriter;
 
 public class AnalyticsCounter {
-	private static int headacheCount = 0;	// initialize to 0
-	private static int rashCount = 0;		// initialize to 0
-	private static int pupilCount = 0;		// initialize to 0
 	
-	public static void main(String args[]) throws Exception {
-		// first get input
-		BufferedReader reader = new BufferedReader (new FileReader("symptoms.txt"));
-		String line = reader.readLine();
-
-		while (line != null) {
-			System.out.println("symptom from file: " + line);
-			if (line.equals("headache")) {
-				headacheCount++;
-				System.out.println("number of headaches: " + headacheCount);
-			}
-			else if (line.equals("rash")) {
-				rashCount++;
-			}
-			else if (line.contains("pupils")) {
-				pupilCount++;
-			}
-
-			line = reader.readLine();	// get another symptom
-		}
 		
-		// next generate output
-		FileWriter writer = new FileWriter ("result.out");
-		writer.write("headache: " + headacheCount + "\n");
-		writer.write("rash: " + rashCount + "\n");
-		writer.write("dialated pupils: " + pupilCount + "\n");
-		writer.close();
+	public static void main(String[] args) {
+
+		String inputFile = "symptoms.txt";
+		String outputFile = "results.out";
+		
+		//reader:
+		ISymptomReader symptomReader = new SymptomReaderImplFromFile(inputFile);
+		List<String> symptomsList = symptomReader.getSymptoms();
+		System.out.println("symptomsList = " + symptomsList);
+		
+		//analyzer:
+		ISymptomAnalyzer symptomAnalyzer = new SymptomAnalyzerImplHashMap();
+		Map<String, Integer> symptomsReport = symptomAnalyzer.analyze(symptomsList);
+		System.out.println("symptomsReport = " + symptomsReport);
+
+		//writer:
+		ISymptomReportWriter symptomReportWriter = new SymptomReportWriterImplFile(outputFile);
+		boolean writeHasSucceeded = symptomReportWriter.writeReport(symptomsReport);
+		System.out.println("Writing the symptoms report has succeeded : "+ writeHasSucceeded);
+
 	}
 }
