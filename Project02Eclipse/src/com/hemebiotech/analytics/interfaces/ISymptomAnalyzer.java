@@ -6,6 +6,7 @@ import java.util.Map;
 /**
  * 
  * Interface for symptoms analyzer service.
+ * <p>The implementation needs to order the Map in symptom alphabetical order.</p>
  * 
  * @author jerome Lassus
  *
@@ -18,7 +19,7 @@ public interface ISymptomAnalyzer {
 	 * 
 	 * @param symptomsList the list of symptoms to analyze.
 	 * 
-	 * @return Map object with key=symptom and value=number of occurrences
+	 * @return Map object with key=symptom and value=number of occurrences, in symptom alphabetical order.
 	 */
 	public Map<String,Integer> analyze(List<String> symptomsList);
 	

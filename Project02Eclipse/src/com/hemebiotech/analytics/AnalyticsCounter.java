@@ -3,12 +3,9 @@ package com.hemebiotech.analytics;
 import java.util.List;
 import java.util.Map;
 
-import com.hemebiotech.analytics.impl.SymptomAnalyzerImplHashMap;
+import com.hemebiotech.analytics.impl.SymptomAnalyzerImplTreeMap;
 import com.hemebiotech.analytics.impl.SymptomReaderImplFromFile;
 import com.hemebiotech.analytics.impl.SymptomReportWriterImplFile;
-import com.hemebiotech.analytics.interfaces.ISymptomAnalyzer;
-import com.hemebiotech.analytics.interfaces.ISymptomReader;
-import com.hemebiotech.analytics.interfaces.ISymptomReportWriter;
 
 public class AnalyticsCounter {
 	
@@ -19,18 +16,18 @@ public class AnalyticsCounter {
 		String outputFile = "results.out";
 		
 		//reader:
-		ISymptomReader symptomReader = new SymptomReaderImplFromFile(inputFile);
-		List<String> symptomsList = symptomReader.getSymptoms();
+		SymptomReaderImplFromFile symptomReaderImplFromFile = new SymptomReaderImplFromFile(inputFile);
+		List<String> symptomsList = symptomReaderImplFromFile.getSymptoms();
 		System.out.println("symptomsList = " + symptomsList);
 		
 		//analyzer:
-		ISymptomAnalyzer symptomAnalyzer = new SymptomAnalyzerImplHashMap();
-		Map<String, Integer> symptomsReport = symptomAnalyzer.analyze(symptomsList);
+		SymptomAnalyzerImplTreeMap symptomAnalyzerImplHashMap = new SymptomAnalyzerImplTreeMap();
+		Map<String, Integer> symptomsReport = symptomAnalyzerImplHashMap.analyze(symptomsList);
 		System.out.println("symptomsReport = " + symptomsReport);
 
 		//writer:
-		ISymptomReportWriter symptomReportWriter = new SymptomReportWriterImplFile(outputFile);
-		boolean writeHasSucceeded = symptomReportWriter.writeReport(symptomsReport);
+		SymptomReportWriterImplFile symptomReportWriterImplFile = new SymptomReportWriterImplFile(outputFile);
+		boolean writeHasSucceeded = symptomReportWriterImplFile.writeReport(symptomsReport);
 		System.out.println("Writing the symptoms report has succeeded : "+ writeHasSucceeded);
 
 	}

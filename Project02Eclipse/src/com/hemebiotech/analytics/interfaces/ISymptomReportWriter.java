@@ -4,13 +4,12 @@ import java.util.Map;
 
 /**
  * <b>Interface to write symptom synthesis to a destination</b>
- * <p>List of symptoms must be written in alphabetical order !</p>
  * 
  */
 public interface ISymptomReportWriter {
 	
 	/**
-	 * Write the symptom Report report in alphabetical order
+	 * Write the symptom Report report.
 	 * 
 	 * @param symptomReport a Map object with key=symptom and value=number of occurrences
 	 * 

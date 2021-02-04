@@ -1,13 +1,13 @@
 package com.hemebiotech.analytics.impl;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import com.hemebiotech.analytics.interfaces.ISymptomAnalyzer;
 
 /**
- * <b>Implementation of SymptomAnalyzer using HashMap as Map result.</b>
+ * <b>Implementation of SymptomAnalyzer using TreeMap.</b>
  * 
  * <p>
  * Usage :
@@ -22,12 +22,12 @@ import com.hemebiotech.analytics.interfaces.ISymptomAnalyzer;
  * @author jerome Lassus
  * @version 1.0
  */
-public class SymptomAnalyzerImplHashMap implements ISymptomAnalyzer {
+public class SymptomAnalyzerImplTreeMap implements ISymptomAnalyzer {
 
 	@Override
 	public Map<String, Integer> analyze(List<String> symptomsList) {
 
-		Map<String, Integer> symptomReport = new HashMap<>();
+		Map<String, Integer> symptomReport = new TreeMap<>();
 
 		symptomsList.forEach( symptom -> {
 			if (!symptomReport.containsKey(symptom)) //symptom not present in synthesisReport

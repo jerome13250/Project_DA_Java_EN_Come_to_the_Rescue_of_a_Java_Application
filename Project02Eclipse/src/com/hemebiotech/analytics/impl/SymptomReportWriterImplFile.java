@@ -48,15 +48,12 @@ public class SymptomReportWriterImplFile implements ISymptomReportWriter {
 	@Override
 	public boolean writeReport(Map<String, Integer> symptomReport) {
 		
-		//Ordering the provided symptomSynthesis Map in a new TreeMap alphabeticaly ordered object:
-		TreeMap<String, Integer> symptomSynthesisOrderedTreeMap = new TreeMap<>(symptomReport);
-	
 		//writing to file:
 		if (filepath != null) {
 
 			try (BufferedWriter writer = new BufferedWriter (new FileWriter(filepath));)
 			{	
-				for ( Iterator<Entry<String, Integer>> iterator = symptomSynthesisOrderedTreeMap.entrySet().iterator(); iterator.hasNext();) 
+				for ( Iterator<Entry<String, Integer>> iterator = symptomReport.entrySet().iterator(); iterator.hasNext();) 
 				{
 					Entry<String, Integer> couple = iterator.next();
 					String symptom = couple.getKey();
