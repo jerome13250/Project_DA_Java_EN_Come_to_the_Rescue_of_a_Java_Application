@@ -30,11 +30,18 @@ public class SymptomReportWriterImplFile implements ISymptomReportWriter {
 
 	/**
 	 * Path for file writing the symptoms synthesis.
-	 * This value is set with constructor.
 	 * 
 	 * @see SymptomSynthesisWriterImplFile#SymptomSynthesisWriterImplFile(String)
 	 */
 	private String filepath;
+
+	/**
+	 * Default constructor for SymptomReaderImplFromFile class.
+	 * 
+	 * Does nothing, only allow to create the object.
+	 */
+	public SymptomReportWriterImplFile() {
+	}
 
 	/**
 	 * Constructor for SymptomSynthesisWriterImplFile class.
@@ -47,7 +54,7 @@ public class SymptomReportWriterImplFile implements ISymptomReportWriter {
 
 	@Override
 	public boolean writeReport(Map<String, Integer> symptomReport) {
-		
+
 		//writing to file:
 		if (filepath != null) {
 
@@ -68,6 +75,19 @@ public class SymptomReportWriterImplFile implements ISymptomReportWriter {
 			return true;
 		}
 		return false;
+	}
+
+	/**
+	 * Write the symptom Report.
+	 * 
+	 * @param symptomReport a Map object with key=symptom and value=number of occurrences
+	 * @param filepath a full or partial path to file destination for symptom report.
+	 * 
+	 * @return a boolean for success (true) or failure (false) of writing
+	 */
+	public boolean writeReport(Map<String, Integer> symptomReport, String filepath) {
+		this.filepath = filepath;
+		return writeReport(symptomReport);
 	}
 
 }

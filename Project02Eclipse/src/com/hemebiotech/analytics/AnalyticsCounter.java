@@ -16,8 +16,8 @@ public class AnalyticsCounter {
 		String outputFile = "results.out";
 		
 		//reader:
-		SymptomReaderImplFromFile symptomReaderImplFromFile = new SymptomReaderImplFromFile(inputFile);
-		List<String> symptomsList = symptomReaderImplFromFile.getSymptoms();
+		SymptomReaderImplFromFile symptomReaderImplFromFile = new SymptomReaderImplFromFile();
+		List<String> symptomsList = symptomReaderImplFromFile.getSymptoms(inputFile);
 		System.out.println("symptomsList = " + symptomsList);
 		
 		//analyzer:
@@ -26,8 +26,8 @@ public class AnalyticsCounter {
 		System.out.println("symptomsReport = " + symptomsReport);
 
 		//writer:
-		SymptomReportWriterImplFile symptomReportWriterImplFile = new SymptomReportWriterImplFile(outputFile);
-		boolean writeHasSucceeded = symptomReportWriterImplFile.writeReport(symptomsReport);
+		SymptomReportWriterImplFile symptomReportWriterImplFile = new SymptomReportWriterImplFile();
+		boolean writeHasSucceeded = symptomReportWriterImplFile.writeReport(symptomsReport,outputFile);
 		System.out.println("Writing the symptoms report has succeeded : "+ writeHasSucceeded);
 
 	}

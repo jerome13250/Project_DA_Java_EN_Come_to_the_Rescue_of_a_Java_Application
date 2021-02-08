@@ -27,12 +27,20 @@ public class SymptomReaderImplFromFile implements ISymptomReader {
 
 	/**
 	 * Path for file containing the symptoms.
-	 * This value is set with constructor.
 	 * 
 	 * @see SymptomReaderImplFromFile#SymptomReaderImplFromFile(String)
 	 */
 	private String filepath;
 
+	/**
+	 * Default constructor for SymptomReaderImplFromFile class.
+	 * 
+	 * Does nothing, only allow to create the object.
+	 */
+	public SymptomReaderImplFromFile () {
+	}
+	
+	
 	/**
 	 * Constructor for SymptomReaderImplFromFile class.
 	 * 
@@ -64,6 +72,18 @@ public class SymptomReaderImplFromFile implements ISymptomReader {
 		}
 
 		return result;
+	}
+	
+	/**
+	 * Method to read the symptoms using the file as parameter.
+	 * 
+	 * @param filepath : a full or partial path to file with symptom strings in it, one per line
+	 * 
+	 * @see SymptomReaderImplFromFile#filepath
+	 */
+	public List<String> getSymptoms(String file) {
+		this.filepath = file;
+		return getSymptoms();
 	}
 
 }

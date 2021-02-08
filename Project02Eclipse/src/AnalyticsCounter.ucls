@@ -5,69 +5,58 @@
     project="Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application" 
     file="/Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/src/com/hemebiotech/analytics/interfaces/ISymptomAnalyzer.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="674" y="195"/>    
+    <position height="-1" width="-1" x="681" y="281"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="2" language="java" name="com.hemebiotech.analytics.impl.SymptomAnalyzerImplHashMap" 
-    project="Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application" 
-    file="/Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/src/com/hemebiotech/analytics/impl/SymptomAnalyzerImplHashMap.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="372" y="244"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="3" language="java" name="com.hemebiotech.analytics.interfaces.ISymptomReader" 
+  <interface id="2" language="java" name="com.hemebiotech.analytics.interfaces.ISymptomReader" 
     project="Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application" 
     file="/Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/src/com/hemebiotech/analytics/interfaces/ISymptomReader.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="615" y="60"/>    
+    <position height="-1" width="-1" x="657" y="112"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="4" language="java" name="com.hemebiotech.analytics.impl.SymptomReaderImplFromFile" 
+  <class id="3" language="java" name="com.hemebiotech.analytics.impl.SymptomReaderImplFromFile" 
     project="Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application" 
     file="/Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/src/com/hemebiotech/analytics/impl/SymptomReaderImplFromFile.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="326" y="95"/>    
+    <position height="-1" width="-1" x="379" y="114"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="5" language="java" name="com.hemebiotech.analytics.interfaces.ISymptomReportWriter" 
+  <interface id="4" language="java" name="com.hemebiotech.analytics.interfaces.ISymptomReportWriter" 
     project="Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application" 
     file="/Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/src/com/hemebiotech/analytics/interfaces/ISymptomReportWriter.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="612" y="356"/>    
+    <position height="-1" width="-1" x="671" y="449"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="6" language="java" name="com.hemebiotech.analytics.impl.SymptomReportWriterImplFile" 
+  <class id="5" language="java" name="com.hemebiotech.analytics.impl.SymptomReportWriterImplFile" 
     project="Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application" 
     file="/Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/src/com/hemebiotech/analytics/impl/SymptomReportWriterImplFile.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="336" y="417"/>    
+    <position height="-1" width="-1" x="378" y="445"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="com.hemebiotech.analytics.AnalyticsCounter" 
+  <class id="6" language="java" name="com.hemebiotech.analytics.AnalyticsCounter" 
     project="Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application" 
     file="/Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/src/com/hemebiotech/analytics/AnalyticsCounter.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -78,29 +67,40 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <realization id="8">    
+  <class id="7" language="java" name="com.hemebiotech.analytics.impl.SymptomAnalyzerImplTreeMap" 
+    project="Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application" 
+    file="/Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/src/com/hemebiotech/analytics/impl/SymptomAnalyzerImplTreeMap.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="398" y="282"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="8">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="5"/>  
-  </realization>  
-  <dependency id="9">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="4"/>  
   </dependency>  
-  <realization id="10">    
-    <end type="SOURCE" refId="2"/>    
+  <realization id="9">    
+    <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="1"/>  
   </realization>  
-  <realization id="11">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
-  <dependency id="12">    
-    <end type="SOURCE" refId="7"/>    
+  <realization id="10">    
+    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="2"/>  
+  </realization>  
+  <dependency id="11">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
   </dependency>  
+  <realization id="12">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
   <dependency id="13">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="6"/>  
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="7"/>  
   </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
