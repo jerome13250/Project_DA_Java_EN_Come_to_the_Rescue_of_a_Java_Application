@@ -65,7 +65,7 @@ public class SymptomReportWriterImplFile implements ISymptomReportWriter {
 					Entry<String, Integer> couple = iterator.next();
 					String symptom = couple.getKey();
 					Integer count = couple.getValue();
-					writer.write(symptom + ": " + count + "\n");
+					writer.write(symptom + " = " + count + "\n");
 				}
 
 			} catch (IOException e) {
